@@ -20,7 +20,10 @@ Bring the system up with `docker-compose -f docker-compose.yml up` from the proj
 - `elasticsearch`: Elasticsearch node (Graylog primary storage)
 - `graylog`: Graylog server
 
-To connect to the `graylog` Docker network from another compose project:
+
+### Connecting
+
+To connect to Graylog from a compose project running alongside this one:
 
 1) Add a reference to it (Docker prefixes network names with their root project directory):
 
@@ -44,3 +47,5 @@ some-service:
       tag: "some-service"
   ...
 ```
+
+To connect to Graylog from a different host, just configure `gelf` logging and point it to `udp://<GRAYLOG_EXTERNAL_API_URL>:12201`.
