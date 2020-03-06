@@ -5,10 +5,10 @@
 ```
 GRAYLOG_PASSWORD_SECRET=atleast16characters!
 GRAYLOG_ROOT_PASSWORD_SHA2=seebelow
-GRAYLOG_EXTERNAL_API_URL=http://<host>:9000/
+GRAYLOG_HTTP_EXTERNAL_URI=http://<host>:9000/
 ```
 
-Once you have chosen a password for the Graylog root user (note that this is *not* the same as `GRAYLOG_PASSWORD_SECRET`), `GRAYLOG_ROOT_PASSWORD_SHA2` can be generated with the following:
+Once you have chosen a password for the Graylog root user (note that this is the password you will log into the Graylog UI with, and is *not* the same as `GRAYLOG_PASSWORD_SECRET`), `GRAYLOG_ROOT_PASSWORD_SHA2` can be generated with the following:
 
 ```bash
 echo -n "Enter Password: " && head -1 </dev/stdin | tr -d '\n' | sha256sum | cut -d" " -f1
