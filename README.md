@@ -48,4 +48,4 @@ some-service:
   ...
 ```
 
-To connect to Graylog from a different host, just configure `gelf` logging and point it to `udp://<GRAYLOG_EXTERNAL_API_URL>:12201`.
+To connect to Graylog from a different project type, just configure `gelf` logging and point it to `udp://<host>:12201`.
