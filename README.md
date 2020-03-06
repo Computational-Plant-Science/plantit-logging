@@ -30,15 +30,17 @@ networks:
     driver: bridge
 ```
 
-2) Reference from a service, substituting the appropriate host:
+2) Reference from (and tag) a service, substituting the appropriate host:
 
 ```yml
 some-service:
   ...
+  networks:
+    - DIRT2_Logging_graylog
   logging:
     driver: gelf
     options:
-      gelf-address: udp://<host>:12201
-      tag: "postgres"
+      gelf-address: udp://graylog:12201
+      tag: "some-service"
   ...
 ```
