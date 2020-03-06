@@ -1,4 +1,15 @@
-### Usage
+# DIRT2_LOGGING
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Contents**
+
+- [Usage](#usage)
+- [Connecting](#connecting)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Usage
 
 `DIRT2_Logging` expects the following environment variables to be defined in a file called `.env` in the project root:
 
@@ -21,7 +32,7 @@ Bring the system up with `docker-compose -f docker-compose.yml up` from the proj
 - `graylog`: Graylog server
 
 
-### Connecting
+## Connecting
 
 To connect to Graylog from a compose project running alongside this one:
 
