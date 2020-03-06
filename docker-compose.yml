@@ -9,7 +9,7 @@ services:
       - default
       - graylog
     healthcheck:
-      test: echo 'db.runCommand("ping").ok' | mongo mongo:27017/test --quiet 1
+      test: echo 'db.runCommand("ping").ok' | mongo localhost:27017/test --quiet
       interval: 20s
       timeout: 20s
       retries: 2
