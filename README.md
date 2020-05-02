@@ -11,6 +11,14 @@
 
 ## Usage
 
+To bootstrap a development environment, run `bootstrap.sh`. Then bring containers up with `docker-compose -f docker-compose.yml up` from the project root:
+
+- `mongo`: MongoDB instance (Graylog metadata)
+- `elasticsearch`: Elasticsearch node (Graylog primary storage)
+- `graylog`: Graylog server
+
+## Environment variables
+
 `DIRT2_Logging` expects the following environment variables to be defined in a file called `.env` in the project root:
 
 ```
@@ -18,19 +26,6 @@ GRAYLOG_PASSWORD_SECRET=atleast16characters!
 GRAYLOG_ROOT_PASSWORD_SHA2=seebelow
 GRAYLOG_HTTP_EXTERNAL_URI=http://<host>:9000/
 ```
-
-Once you have chosen a password for the Graylog root user (note that this is the password you will log into the Graylog UI with, and is *not* the same as `GRAYLOG_PASSWORD_SECRET`), `GRAYLOG_ROOT_PASSWORD_SHA2` can be generated with the following:
-
-```bash
-echo -n "Enter Password: " && head -1 </dev/stdin | tr -d '\n' | sha256sum | cut -d" " -f1
-```
-
-Bring the system up with `docker-compose -f docker-compose.yml up` from the project root. This will start 3 containers:
-
-- `mongo`: MongoDB instance (Graylog metadata)
-- `elasticsearch`: Elasticsearch node (Graylog primary storage)
-- `graylog`: Graylog server
-
 
 ## Connecting
 
