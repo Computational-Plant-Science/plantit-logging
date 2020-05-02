@@ -1,4 +1,4 @@
-# plantit-logging [![Build Status](https://travis-ci.com/Computational-Plant-Science/DIRT2_Logging.svg?token=8SgKppiotCz5BKibbN5Q&branch=master)](https://travis-ci.com/Computational-Plant-Science/DIRT2_Logging)
+# plantit-logging [![Build Status](https://travis-ci.com/Computational-Plant-Science/plantit-logging.svg?branch=master)](https://travis-ci.com/Computational-Plant-Science/plantit-logging)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
