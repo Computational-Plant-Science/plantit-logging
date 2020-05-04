@@ -16,7 +16,7 @@ services:
       start_period: 20s
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:6.8.8
+    image: elasticsearch:6.8.8
     volumes:
       - es_data:/usr/share/elasticsearch/data
     environment:
