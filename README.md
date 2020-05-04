@@ -17,6 +17,8 @@ To bootstrap a development environment, run `bootstrap.sh`. Then bring container
 - `elasticsearch`: Elasticsearch node (Graylog primary storage)
 - `graylog`: Graylog server
 
+Note that Graylog may take some time to start, and the docker container will report an unhealthy status until the web interface is up and running.
+
 ## Environment variables
 
 `DIRT2_Logging` expects the following environment variables to be defined in a file called `.env` in the project root:
