@@ -7,5 +7,5 @@ ssh-add ~/.ssh/id_rsa # Add the private key to SSH
 ssh -o StrictHostKeyChecking=no -p $SSH_PORT "$SSH_USER@$SSH_HOST" <<EOF
   cd $SSH_DIRECTORY
   chmod +x ./deploy.sh
-  ./dev/deploy.sh $SSH_HOST $GRAYLOG_ROOT_PASSWORD_SHA2
+  ./deploy.sh $SSH_HOST $GRAYLOG_ROOT_PASSWORD_SHA2
 EOF
