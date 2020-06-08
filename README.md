@@ -25,9 +25,12 @@ Note that Graylog may take some time to start, and the docker container will rep
 
 ```
 GRAYLOG_PASSWORD_SECRET=atleast16characters!
-GRAYLOG_ROOT_PASSWORD_SHA2=seebelow
+GRAYLOG_ROOT_PASSWORD=some_password
+GRAYLOG_ROOT_PASSWORD_SHA2=hash_of_above
 GRAYLOG_HTTP_EXTERNAL_URI=http://<host>:9000/
 ```
+
+Running `bootstrap.sh` from the project root will auto-generate values suitable for local development. Before deploying, be sure to change `GRAYLOG_HTTP_EXTERNAL_URI` to point to the hosts's IP or FQDN.
 
 ## Connecting
 
