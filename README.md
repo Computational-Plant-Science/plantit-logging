@@ -21,7 +21,7 @@ Note that Graylog may take some time to start, and the docker container will rep
 
 ## Environment variables
 
-`DIRT2_Logging` expects the following environment variables to be defined in a file called `.env` in the project root:
+`plantit-logging` expects the following environment variables to be defined in a file called `.env` in the project root:
 
 ```
 GRAYLOG_PASSWORD_SECRET=atleast16characters!
@@ -31,27 +31,15 @@ GRAYLOG_HTTP_EXTERNAL_URI=http://<host>:9000/
 
 ## Connecting
 
-To connect to Graylog from a compose project running alongside this one:
-
-1) Add a reference to it (Docker prefixes network names with their root project directory):
-
-```yml
-networks:
-  DIRT2_Logging_graylog:
-    driver: bridge
-```
-
-2) Reference from (and tag) a service, substituting the appropriate host:
+To connect to Graylog from a `docker-compose` project, just add the following configuration, substituting the appropriate host:
 
 ```yml
 some-service:
   ...
-  networks:
-    - DIRT2_Logging_graylog
   logging:
     driver: gelf
     options:
-      gelf-address: udp://graylog:12201
+      gelf-address: udp://<host>:12201
       tag: "some-service"
   ...
 ```
